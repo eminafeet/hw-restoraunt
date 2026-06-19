@@ -366,7 +366,7 @@ const api_mock = {
 }
 
 function open_food_card(food_id){
-    window.location.href = BASE_URL + '?id=' + food_id;
+    window.location.href += BASE_URL + '?id=' + food_id;
 }
 
 function build_restaurant_menu(from_api, container = UI.REST_MENU) {
