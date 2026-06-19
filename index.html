@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ресторан — меню</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+    <body>
+        <div class="app"> <!-- Main container -->
+            <div class="main__sidebar">
+                <div class="sidebar">
+                    <!-- Item for sidebar-->
+                    <div class="sidebar__list">
+                        <div class="sidebar__item" onclick="sidebar_chose_tab('MENU')">
+                            <div class="sidebar__item__icon">
+                                <img src="./public/icons-menu.svg" alt="Меню" width="22">
+                            </div>
+                            <div class="sidebar__item__text">Меню</div>
+                        </div>
+                        <div class="sidebar__item" onclick="sidebar_chose_tab('ENTERTAINMENT')">
+                            <div class="sidebar__item__icon">
+                                <img src="./public/icons-entertainment.svg" alt="Развлечения" width="22">
+                            </div>
+                            <div class="sidebar__item__text">Развлечения</div>
+                        </div>
+                        <div class="sidebar__item" onclick="sidebar_chose_tab('ABOUT')">
+                            <div class="sidebar__item__icon">
+                                <img src="./public/icons-about.svg" alt="О ресторане" width="22">
+                            </div>
+                            <div class="sidebar__item__text">О ресторане</div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom item-->
+                    <div class="sidebar__item"  onclick="sidebar_chose_tab('SHOPPING_BUCKET')">
+                        <div class="sidebar__item__icon">
+                            <img src="./public/icons-shopping-basket.svg" alt="Мой заказ" width="26">
+                        </div>
+                        <div class="sidebar__item__text">Мой заказ</div>
+                    </div>
+                </div>
+                <div class="second__sidebar__bg" id="second-sidebar-bg" onclick="second_sidebar_close()"></div>
+                <div class="second__sidebar" id="second-sidebar">
+                    <div class="sidebar__list">
+                        <div class="sidebar__item">
+                            <div class="sidebar__item__icon">
+                                <img src="./public/icons-games.svg" alt="Игры" width="22">
+                            </div>
+                            <div class="sidebar__item__text">Игры</div>
+                        </div>
+                        <div class="sidebar__item">
+                            <div class="sidebar__item__icon">
+                                <img src="./public/icons-question.svg" alt="Квизы" width="22">
+                            </div>
+                            <div class="sidebar__item__text">Квизы</div>
+                        </div>
+                        <div class="sidebar__item">
+                            <div class="sidebar__item__icon">
+                                <img src="./public/icons-karaoke.svg" alt="Караоке" width="22">
+                            </div>
+                            <div class="sidebar__item__text">Караоке</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu active" id="menu"></div>
+            <div class="about" id="about">
+                <div class="about__container">
+                    Информация о ресторане
+                </div>
+            </div>
+            <div class="shopping__bucket" id="shopping-bucket">
+                <div class="about__container">
+                    Корзина
+                </div>
+            </div>
+        </div>
+
+    <script src="./script.js"></script>
+    </body>
+</html>
