@@ -96,7 +96,7 @@ function build_main_food(from_api, container=UI.FOOD_MAIN){
                     <div class="food__card__footer right">
                         <div class="food_card_btn_rotate" onclick="rotation_card()">
                             <span>Посмотреть состав</span>
-                            <img src="././public/icons-arrow-right.svg" alt="" width="24px" height="24px" />
+                            <img src="../public/icons-arrow-right.svg" alt="" width="24px" height="24px" />
                         </div>
                     </div>
                 </div>
