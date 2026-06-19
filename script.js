@@ -1,5 +1,5 @@
 const DEBUG = false;
-const BASE_URL = '/meal';
+const BASE_URL = 'meal';
 const UI = {
     SIDEBAR_BUTTONS: {
         MENU: document.getElementById('sidebar-first-menu'),
