@@ -19,23 +19,18 @@ function second_sidebar_close(){
     UI.SECOND_SIDEBAR_OVERLAY.classList.remove('active');
 }
 
-async function place_order(order_id, btn){
-    // TODO: CORS policy
-    const data = {
-        meal_id: order_id,
-    };
+async function place_order(order_id, btn) {
     btn.classList.add('skeleton');
+    
     try {
+        const formData = new URLSearchParams();
+        formData.append('meal_id', order_id);
+
         const response = await fetch('https://script.google.com/macros/s/AKfycbzkwYMazwXGWbK1sLAkcM0Dstr5Oym20xO2fnqhT1-JEjrIWJQtIAwK5urGfBuO3QDX/exec', {
             method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
+            body: formData
         });
-        
-        if (!response.ok) {
-            throw new Error(`Ошибка ${response}`);
-        }
+
         const result = await response.json();
         console.log('Результат POST запроса:', result);
     } catch (error) {
